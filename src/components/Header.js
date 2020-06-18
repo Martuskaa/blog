@@ -3,7 +3,7 @@ import backgroundImage from 'startbootstrap-clean-blog/img/home-bg.jpg';
 
 export default class extends React.Component {
   render() {
-    const { title, subtitle, image } = this.props; 
+    const { title, subtitle, image } = this.props;
     return (
       <header className="masthead" style={{ backgroundImage: `url(${image ? image : backgroundImage})` }}>
         <div className="overlay" />

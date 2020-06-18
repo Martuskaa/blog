@@ -5,7 +5,23 @@ export default class extends React.Component {
   state = { singlePage: null };
   abortController = new AbortController();
 
-  
+  componentDidMount() {
+    fetch('https://public-api.wordpress.com/wp/v2/sites/reactjscourse.wordpress.com/pages?slug=about&_embed', {
+      signal: this.abortController.signal,
+    })
+      .then(res => res.json())
+      .then(body => {
+        this.setState({ singlePage: body });
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
+  componentWillUnmount() {
+    this.abortController.abort();
+  }
+
   render() {
     const { singlePage } = this.state;
 
@@ -24,6 +40,6 @@ export default class extends React.Component {
       );
     }
 
-    return <Header title="Wczytywanie..." subtitle=" " />;
+    return <Header title="Loading..." subtitle=" " />;
   }
 }
