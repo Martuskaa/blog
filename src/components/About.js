@@ -40,6 +40,6 @@ export default class extends React.Component {
       );
     }
 
-    return <Header title="Loading..." subtitle=" " />;
+    return <Header title="Wczytywanie..." subtitle=" " />;
   }
 }
