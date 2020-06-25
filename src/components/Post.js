@@ -4,6 +4,7 @@ import Header from './Header';
 export default class extends React.Component {
   state = { singlePost: null };
   abortController = new AbortController();
+
   componentDidMount() {
     fetch('https://public-api.wordpress.com/wp/v2/sites/reactjscourse.wordpress.com/posts?slug=' + this.props.match.params.slug, {
       signal: this.abortController.signal,
@@ -46,9 +47,9 @@ export default class extends React.Component {
     }
 
     if (singlePost && singlePost.length === 0) {
-      return <Header title="Nie znaleziono strony" subtitle=" " />;
+      return <Header title="Page not found" subtitle=" " />;
     }
 
-    return <Header title="Wczytywanie..." subtitle=" " />;
+    return <Header title="Loading..." subtitle=" " />;
   }
 }

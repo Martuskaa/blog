@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class extends React.Component {
   render() {
     const { post, isLast } = this.props;
-    return ( 
+    return (
       <React.Fragment>
         <div className="post-preview">
           <Link to={'/' + post.slug}>
