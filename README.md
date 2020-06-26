@@ -1,5 +1,20 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Aplikacja Marta Blog zrobiona jest w react i pobiera API.
+Aplikacja działa płynnie za pomocą rutera. 
+W moim api znajdują się posty które są pobierane z innej strony.
+Napisana jest w JavaScript.
+Aplikacja składa się z 7 komponetów.
+MainComponent.js, about.js, home.js, footer.js, homepost.js, post.js, nawigacja.js, header.js.
+MainComonent jest to głowny komponent który odnosi się do pozostałych wyżej wymienionych.
+Api podpięte jest w componencie home i about.
+Home jest stroną główną.
+About to pod strona.
+Pobierane w niej posty wświetlają na stronie głównej tylko fragmenty po naciśnięciu na dany fragment postu przenosi nas do całej jego treści.
+W footer znajduje się stopka która odnosi się do strony Facebook.pl i GitHub.com
+Ostylowania jest za pomocą pobranego szablonu z bootstrapa4 clean blog.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
